@@ -1,0 +1,18 @@
+<annotation>
+	<filename>cover_bg.jpg</filename>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>bird</name>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>400</xmin>
+			<ymin>518</ymin>
+			<xmax>558</xmax>
+			<ymax>819</ymax>
+		</bndbox>
+	</object>
+</annotation>
