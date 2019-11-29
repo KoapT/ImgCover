@@ -14,8 +14,9 @@ parser.add_argument('--standard_size', default=608, help='A standard size to reg
 parser.add_argument('--obj_size_range', default=(15, 80), help='The size of objects range from and to', type=tuple)
 parser.add_argument('--num_to_pick', default=(1, 6), help='The number of forehead pictures to pick', type=tuple)
 parser.add_argument('--epoch', default=3, help='The number of epochs to run cover', type=int)
-# 要求目标不显示部分的R/G/B值均为0或者255，即纯黑或者纯白。 默认opencv不读取第四通道（alpha通道）,如果目标图片包含alpha通道，且将不显示部分置为透明，
-# 那么可以直接利用alpha通道创建掩模: mask = cv2.bitwise_not(img[...,:-1])
+# 要求目标不显示部分的R/G/B值均为0或者255，即纯黑或者纯白。 默认opencv不读取第四通道（alpha通道）,
+# 如果目标图片包含alpha通道，且将不显示部分置为透明，可以在imread时加入参数cv2.IMREAD_UNCHANGED，
+# 然后直接利用alpha通道创建掩模: mask = cv2.bitwise_not(img[...,:-1])
 parser.add_argument('--transparent_pixel', default=255, help='Pixel value of transparent areas,to be 0 or 255',
                     type=int)
 
